@@ -60,7 +60,7 @@ SELECT
     u.country,
     COALESCE(x.total_spend_30d, 0) AS total_spend_30d,
     COALESCE(x.txn_count_30d, 0)   AS txn_count_30d,
-    COALESCE(x.avg_order_value, 0) AS avg_order_value,
+    COALESCE(x.avg_order_value, 0) AS avg_order_total_value,
     r.recency_days,
     COALESCE(s.sessions_last_7d, 0) AS sessions_last_7d,
     sf.first_signup_week
