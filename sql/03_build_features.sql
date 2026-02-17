@@ -8,9 +8,9 @@
 -- - first_signup_week (derived from signup_date)
 -- Set "today" for reproducibility. Replace with CURRENT_DATE on RDBMS that supports it.
 WITH params AS (
-    SELECT DATE('2024-06-01') AS as_of_date
+    SELECT DATE('2025-06-17') AS as_of_date
 ),
-
+--added comment ot check conflict
 txns_30d AS (
     SELECT
         t.user_id,
