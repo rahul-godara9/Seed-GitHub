@@ -6,7 +6,6 @@
 -- - recency_days (since last txn)
 -- - sessions_last_7d (web events count)
 -- - first_signup_week (derived from signup_date)
-
 -- Set "today" for reproducibility. Replace with CURRENT_DATE on RDBMS that supports it.
 WITH params AS (
     SELECT DATE('2025-06-17') AS as_of_date
