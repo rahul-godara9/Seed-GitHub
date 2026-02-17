@@ -9,7 +9,7 @@ Outputs per-user daily rollups and a final snapshot for AS_OF_DATE.
 import pandas as pd
 from utils_io import maybe_create_mock_data, load_data
 
-AS_OF_DATE = pd.Timestamp("2024-10-03")
+AS_OF_DATE = pd.Timestamp("2024-06-03")
 
 def main():
     maybe_create_mock_data()
