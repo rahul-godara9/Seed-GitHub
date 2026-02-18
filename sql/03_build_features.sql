@@ -57,7 +57,7 @@ SELECT
     u.user_id,
     u.user_name,
     u.country,
-    COALESCE(x.total_spend_30d, 0) AS total_spend_in_30d,
+    COALESCE(x.total_spend_30d, 0) AS total_spend_30d,
     COALESCE(x.txn_count_30d, 0)   AS txn_count_30d,
     COALESCE(x.avg_order_value, 0) AS avg_order_value,
     r.recency_days,
