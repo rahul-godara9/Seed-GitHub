@@ -12,7 +12,7 @@ WITH params AS (
     SELECT DATE('2025-07-01') AS as_of_date2
 ),
 
-txns_30d AS (
+txns_90d AS (
     SELECT
         t.user_id,
         SUM(t.amount) AS total_spend_90d,
