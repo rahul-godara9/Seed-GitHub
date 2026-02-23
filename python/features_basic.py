@@ -12,7 +12,7 @@ Compute simple user-level features from CSVs using pandas:
 import pandas as pd
 from utils_io import maybe_create_mock_data, load_data
 
-AS_OF_DATE = pd.Timestamp("2024-06-03")  # fixed for demo
+New_date = pd.Timestamp("2024-06-03")  # fixed for demo
 
 
 ## adding a comment for the test ## HC-2026-02-17
