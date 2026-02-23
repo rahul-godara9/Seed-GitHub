@@ -2,7 +2,7 @@
 -- Insert small, readable sample rows
 
 INSERT INTO users (user_id, user_name, country, signup_date) VALUES
-(1, 'Asha', 'IN', DATE('2024-01-01')),
+(1, 'Asha', 'IN', DATE('2024-02-01')),
 (2, 'Ben',  'US', DATE('2024-02-15')),
 (3, 'Chen', 'SG', DATE('2024-03-10'));
 

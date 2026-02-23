@@ -15,7 +15,7 @@ WITH params AS (
 txns_90d AS (
     SELECT
         t.user_id,
-        SUM(t.amount) AS total_spend_90d,
+        SUM(t.amount) AS total_spend_in_90d,
         COUNT(*) AS txn_count_30d,
         CASE WHEN COUNT(*) = 0 THEN 0 ELSE SUM(t.amount) * 1.0 / COUNT(*) END AS avg_order_value,
         MAX(DATE(t.txn_timestamp)) AS last_txn_date
