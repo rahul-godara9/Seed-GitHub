@@ -9,7 +9,7 @@
 
 -- Set "today" for reproducibility. Replace with CURRENT_DATE on RDBMS that supports it.
 WITH params AS (
-    SELECT DATE('2026-06-19') AS as_of_date2
+    SELECT DATE('2026-06-19') AS as_of_date3
 ),
 
 txns_30d AS (
