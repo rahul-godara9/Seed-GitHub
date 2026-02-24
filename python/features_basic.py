@@ -43,7 +43,7 @@ def main():
     # 7-day window for sessions (web events)
     start_7d = AS_OF_DATE - pd.Timedelta(days=7)
     events_7d = events[(events["event_timestamp"] >= start_7d) & (events["event_timestamp"] <= AS_OF_DATE)]
-    sessions = events_7d.groupby("user_id").size().reset_index(name="sessions_last_7d")
+    sessions = events_7d.groupby("user_id").size().reset_index(name="sessions_last_14d")
 
     # signup week
     users["first_signup_week"] = users["signup_date"].dt.strftime("%Y-%W")

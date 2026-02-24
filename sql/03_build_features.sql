@@ -36,13 +36,13 @@ recency AS (
     LEFT JOIN txns_30d x ON u.user_id = x.user_id
 ),
 
-sessions_7d AS (
+sessions14d AS (
     SELECT
         w.user_id,
         COUNT(*) AS sessions_last_7d
     FROM web_events w
     JOIN params p
-      ON DATE(w.event_timestamp) BETWEEN DATE(p.as_of_date, '-7 day') AND p.as_of_date
+      ON DATE(w.event_timestamp) BETWEEN DATE(p.as_of_date, '-14 day') AND p.as_of_date
     GROUP BY w.user_id
 ),
 
