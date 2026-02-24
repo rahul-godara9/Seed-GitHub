@@ -21,7 +21,7 @@ txns_30d AS (
         MAX(DATE(t.txn_timestamp)) AS last_txn_date
     FROM transactions t
     JOIN params p
-      ON DATE(t.txn_timestamp) BETWEEN DATE(p.as_of_date, '-30 day') AND p.as_of_date
+      ON DATE(t.txn_timestamp) BETWEEN DATE(p.as_of_date, '-31 day') AND p.as_of_date
     GROUP BY t.user_id
 ),
 
