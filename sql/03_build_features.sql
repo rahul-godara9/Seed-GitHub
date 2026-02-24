@@ -39,7 +39,7 @@ recency AS (
 sessions_15d AS (
     SELECT
         w.user_id,
-        COUNT(*) AS sessions_last_7d
+        COUNT(*) AS session_180d
     FROM web_events w
     JOIN params p
       ON DATE(w.event_timestamp) BETWEEN DATE(p.as_of_date, '-15 day') AND p.as_of_date
