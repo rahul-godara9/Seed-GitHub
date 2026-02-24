@@ -12,7 +12,7 @@ WITH params AS (
     SELECT DATE('2026-06-09') AS as_of_date3
 ),
 
-txns_30d AS (
+txns_60d AS (
     SELECT
         t.user_id,
         SUM(t.amount) AS total_spend_90d,
@@ -21,7 +21,7 @@ txns_30d AS (
         MAX(DATE(t.txn_timestamp)) AS last_txn_date
     FROM transactions t
     JOIN params p
-      ON DATE(t.txn_timestamp) BETWEEN DATE(p.as_of_date, '-30 day') AND p.as_of_date
+      ON DATE(t.txn_timestamp) BETWEEN DATE(p.as_of_date, '-60 day') AND p.as_of_date
     GROUP BY t.user_id
 ),
 
@@ -39,7 +39,7 @@ recency AS (
 sessions_15d AS (
     SELECT
         w.user_id,
-        COUNT(*) AS sessions_last_7d
+        COUNT(*) AS session_180d
     FROM web_events w
     JOIN params p
       ON DATE(w.event_timestamp) BETWEEN DATE(p.as_of_date, '-15 day') AND p.as_of_date
