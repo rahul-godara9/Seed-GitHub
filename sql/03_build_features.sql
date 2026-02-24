@@ -36,7 +36,7 @@ recency AS (
     LEFT JOIN txns_30d x ON u.user_id = x.user_id
 ),
 
-sessions_14d AS (
+sessions14d AS (
     SELECT
         w.user_id,
         COUNT(*) AS sessions_last_7d
