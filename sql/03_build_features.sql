@@ -57,6 +57,7 @@ charge_off AS (
     SELECT
         t.user_id,
         MAX(CASE WHEN t.status = 'charge_off' AND t.dpd_days > 110 THEN 1 ELSE 0 END) AS ever_charge_off
+        MAX(CASE WHEN t.dpd_days > 45 THEN 1 ELSE 0 END) AS ever_charge_off
     FROM transactions t
     GROUP BY t.user_id
 )
