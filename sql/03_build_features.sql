@@ -77,4 +77,4 @@ LEFT JOIN txns_30d x    ON u.user_id = x.user_id
 LEFT JOIN recency r     ON u.user_id = r.user_id
 LEFT JOIN sessions_7d s ON u.user_id = s.user_id
 LEFT JOIN signup_feats sf ON u.user_id = sf.user_id
-ORDER BY u.user_id;
+ORDER BY u.person_id;
